@@ -1,23 +1,21 @@
 
-import Logo from '../src/assets/cra vs vite.png'
+import { format } from 'date-fns'
+ // import Logo from '../src/assets/cra vs vite.png'
 
-export default function Post(){
+export default function Post({title,summary, cover, content,createdAt, author}){
     return (
         <div className='post' >
         <div className='image' >
-        <img src={Logo} alt='' />
+        <img src={`http://localhost:4000/` + cover} alt='' />
         </div>
         
         <div className='texts'>
-        <h2>Full-house battery backup coming later this year</h2>
+        <h2>{title}</h2>
         <p className='info'>
-          <a className='author' > Guilherme P.Fernandes </a>
-          <time>25-07-2023 22:42</time>
+          <a className='author' >{author.userName}</a>
+          <time>{format(new Date(createdAt), 'd MMM, yyy HH:mm ')}</time>
         </p>
-        <p className='summary' >
-Olá tudo bom? Sou Desenvolvedor de software e estou aberto a novos desáfios.
-Caso esteja precisando de um Dev para seus projeto. Estou disposto a conversar sobre.
-Vou encaminhar meu currículo caso queira me conhecer melhor. Obrigado</p>
+        <p className='summary' >{summary}</p>
         </div>
        
       
