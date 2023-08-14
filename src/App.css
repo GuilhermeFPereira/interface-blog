@@ -1,12 +1,19 @@
 *{
   box-sizing: border-box;
+  padding: 0;
+}
+a{
+  cursor: pointer;
 }
 
 body{
   color: #222;
+  background: rgb(199,246,251);
+  background: linear-gradient(266deg, rgb(177 229 235) 1%, rgb(31 145 203 / 66%) 66%, rgb(139 137 221 / 85%) 87%);
 }
   img{
     max-width: 100%;
+    border-radius: 20px;
   }
 
 main {
@@ -17,24 +24,33 @@ main {
 header{
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: -10px;
   margin-bottom: 50px;
+  height: 100%;
+  width: 100%;
+
   align-items: center;
+  
 }
 
 header a{
   text-decoration: none;
   color: inherit;
+  margin: 0 1.1rem 0 0.5rem;
+  font-weight: bold;
+  text-shadow: 1px 2px #9b9494;
+
+  
 }
 
 header a.logo{
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 header nav{
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 div.post{
@@ -62,7 +78,7 @@ div.post div.texts a{
 
 div.post p.info{
   margin: 6px 0;
-  color: #888;
+  color: #454444;
   font-size: .7rem;
   font-weight: bold;
   display: flex;
@@ -71,6 +87,7 @@ div.post p.info{
 
 div.post p.info a.author{
   color: #333;
+  text-shadow: 1px 1px #a3a3a3;
 
 }
 div.post p.summary{
@@ -93,6 +110,7 @@ input{
   
 }
 button{
+  cursor: pointer;
   width: 100%;
   display: block;
   background-color: #555;
@@ -139,4 +157,23 @@ div.post-page div.author{
 
 div.post-page div.content p{
   line-height: 1.5rem;
+}
+div.edit-row{
+  text-align: center;
+  margin-bottom: 20px;
+}
+div.post-page a.edit-btn{
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+a svg{
+  height: 20px;
 }

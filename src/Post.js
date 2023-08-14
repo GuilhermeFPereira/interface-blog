@@ -1,5 +1,5 @@
 
-import { format } from 'date-fns'
+import { formatISO9075 } from 'date-fns'
 import { Link } from 'react-router-dom'
  // import Logo from '../src/assets/cra vs vite.png'
 
@@ -19,7 +19,7 @@ export default function Post({_id,title,summary, cover, content,createdAt, autho
         
         <p className='info'>
           <a className='author' >{author.userName}</a>
-          <time>{format(new Date(createdAt), 'd MMM, yyy HH:mm ')}</time>
+          <time>{formatISO9075(new Date(createdAt), 'd MMM, yyy HH:mm ')}</time>
         </p>
         <p className='summary' >{summary}</p>
         </div>
