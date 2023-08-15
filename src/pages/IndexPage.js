@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Post from "../Post";
 
+const baseUrl = 'https://api-blog-beta.vercel.app'
 export default function IndexPage(){
     const [posts,SetPosts] = useState([])
     useEffect(() =>{
-        fetch('http://localhost:4000/post').then(response =>{
+        fetch(`${baseUrl}/post`).then(response =>{
             response.json().then(posts => {
                 SetPosts(posts)
             })

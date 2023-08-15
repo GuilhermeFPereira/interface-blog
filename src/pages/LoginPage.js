@@ -2,6 +2,8 @@ import { useContext, useState } from "react"
 import { Navigate } from "react-router-dom"
 import { UserContext } from "../UserContext"
 
+const baseUrl = 'https://api-blog-beta.vercel.app'
+
 export default function LoginPage(){
     const [userName, setUserName] = useState()
     const [password, setPassword] = useState()
@@ -9,7 +11,7 @@ export default function LoginPage(){
     const {setUserInfo} = useContext(UserContext)
   async  function login(ev){
         ev.preventDefault()
-    const response = await fetch('http://localhost:4000/login' , {
+    const response = await fetch(`${baseUrl}/login` , {
             method: 'POST',
             body: JSON.stringify({userName, password}),
             headers: {'Content-Type':'application/json'},
