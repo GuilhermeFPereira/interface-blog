@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Navigate, useParams} from "react-router-dom";
 import Editor from "../Editor";
 
-const baseUrl = 'https://api-blog-beta.vercel.app'
+const baseUrl = 'https://apibloggui.vercel.app'
 export default function EditPost() {
   const {id} = useParams();
   const [title,setTitle] = useState('');
@@ -35,6 +35,7 @@ export default function EditPost() {
     const response = await fetch(`${baseUrl}/post`, {
       method: 'PUT',
       body: data,
+
       credentials: 'include',
     });
     if (response.ok) {

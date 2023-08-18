@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const baseUrl = 'https://api-blog-beta.vercel.app'
+const baseUrl = 'https://apibloggui.vercel.app'
 export default function RegisterPage(){
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')

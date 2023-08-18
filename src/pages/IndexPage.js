@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Post from "../Post";
 
-const baseUrl = 'https://api-blog-beta.vercel.app'
+const baseUrl = 'https://apibloggui.vercel.app'
 export default function IndexPage(){
     const [posts,SetPosts] = useState([])
     useEffect(() =>{

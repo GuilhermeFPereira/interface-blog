@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import {UserContext} from "../UserContext"
 
-const baseUrl = 'https://api-blog-beta.vercel.app'
+const baseUrl = 'https://apibloggui.vercel.app'
 
 export default function PostPage(){
     const [postInfo, setPostInfo] = useState(null)

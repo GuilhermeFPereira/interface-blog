@@ -1,13 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
-const baseUrl = 'https://api-blog-beta.vercel.app/'
+const baseUrl = 'https://apibloggui.vercel.app'
 
 export default function Header(){
   const {setUserInfo, userInfo} = useContext(UserContext)
   useEffect(()=>{
-    fetch(`${baseUrl}profile`,{
+    fetch(`${baseUrl}/profile`,{
       credentials: 'include',
     }).then(response =>{
       response.json().then(userInfo =>{
@@ -17,7 +17,7 @@ export default function Header(){
   },[])
 
   function logout(){
-    fetch(`${baseUrl}logout`, {
+    fetch(`${baseUrl}/logout`, {
       credentials: 'include',
       method: 'POST'
     })

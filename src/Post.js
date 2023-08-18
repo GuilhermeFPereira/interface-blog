@@ -2,7 +2,7 @@
 import { formatISO9075 } from 'date-fns'
 import { Link } from 'react-router-dom'
  // import Logo from '../src/assets/cra vs vite.png'
- const baseUrl = 'https://api-blog-beta.vercel.app' 
+ const baseUrl = 'https://apibloggui.vercel.app' 
 
 export default function Post({_id,title,summary, cover, content,createdAt, author}){
     return (
