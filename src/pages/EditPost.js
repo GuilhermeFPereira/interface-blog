@@ -13,7 +13,7 @@ export default function EditPost() {
 
   useEffect(() => {
     fetch(`${baseUrl}/post/`+id,{
-      mode: "no-cors",
+      // mode: "no-cors",
     })
       .then(response => {
         response.json().then(postInfo => {

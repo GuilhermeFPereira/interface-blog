@@ -13,7 +13,7 @@ export default function PostPage(){
     useEffect(() => {
         
         fetch(`${baseUrl}/post/${id}`,{
-            mode: "no-cors",
+            // mode: "no-cors",
         })
         .then( response => {
             response.json().then(postInfo =>{
