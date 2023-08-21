@@ -12,7 +12,9 @@ export default function EditPost() {
   const [redirect,setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch(`${baseUrl}/post/`+id)
+    fetch(`${baseUrl}/post/`+id,{
+      headers: {'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'}
+    })
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);

@@ -12,7 +12,9 @@ export default function PostPage(){
     const {id} = useParams()
     useEffect(() => {
         
-        fetch(`${baseUrl}/post/${id}`)
+        fetch(`${baseUrl}/post/${id}`,{
+            headers: {'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'},
+        })
         .then( response => {
             response.json().then(postInfo =>{
                 setPostInfo(postInfo)

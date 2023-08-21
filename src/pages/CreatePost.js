@@ -24,6 +24,7 @@ export default function CreatePost (){
    const response = await fetch(`${baseUrl}/post`, {
             method: 'POST',
             body: data,
+            headers: {'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'},
             credentials: 'include'
         })
         if(response.ok){

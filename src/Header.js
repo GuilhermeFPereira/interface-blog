@@ -9,6 +9,7 @@ export default function Header(){
   useEffect(()=>{
     fetch(`${baseUrl}/profile`,{
       credentials: 'include',
+      headers: {'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'},
     }).then(response =>{
       response.json().then(userInfo =>{
         setUserInfo(userInfo)
@@ -19,7 +20,8 @@ export default function Header(){
   function logout(){
     fetch(`${baseUrl}/logout`, {
       credentials: 'include',
-      method: 'POST'
+      method: 'POST',
+      headers:{'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'},
     })
     setUserInfo(null)
   }
