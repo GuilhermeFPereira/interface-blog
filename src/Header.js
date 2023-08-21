@@ -5,7 +5,7 @@ import { UserContext } from "./UserContext";
 const baseUrl = 'https://apibloggui.vercel.app'
 
 export default function Header(){
-  const {setUserInfo, userInfo} = useContext(UserContext)
+  const {userInfo, setUserInfo} = useContext(UserContext)
   useEffect(()=>{
     fetch(`${baseUrl}/profile`,{
       credentials: 'include',
