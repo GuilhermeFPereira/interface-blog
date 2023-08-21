@@ -12,6 +12,7 @@ export default function LoginPage(){
   async  function login(ev){
         ev.preventDefault()
     const response = await fetch(`${baseUrl}/login` , {
+            mode: "no-cors",
             method: 'POST',
             body: JSON.stringify({userName, password}),
             headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': '*'},

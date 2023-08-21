@@ -5,11 +5,11 @@ import { UserContext } from "./UserContext";
 const baseUrl = 'https://apibloggui.vercel.app'
 
 export default function Header(){
-  const {userInfo, setUserInfo} = useContext(UserContext)
+  const {setUserInfo, userInfo} = useContext(UserContext)
   useEffect(()=>{
     fetch(`${baseUrl}/profile`,{
       credentials: 'include',
-      headers: {'Access-Control-Allow-Origin': '*'},
+      header: {'Access-Control-Allow-Origin': '*'},
     }).then(response =>{
       response.json().then(userInfo =>{
         setUserInfo(userInfo)
@@ -19,9 +19,10 @@ export default function Header(){
 
   function logout(){
     fetch(`${baseUrl}/logout`, {
+      mode: "no-cors",
       credentials: 'include',
       method: 'POST',
-      headers:{'Access-Control-Allow-Origin': '*'},
+      header:{'Access-Control-Allow-Origin': '*'},
     })
     setUserInfo(null)
   }

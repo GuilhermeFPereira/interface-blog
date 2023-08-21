@@ -7,6 +7,7 @@ export default function RegisterPage(){
    async function register(ev){
        ev.preventDefault()
      const response = await fetch(`${baseUrl}/register`, {
+        mode: "no-cors",
             method: 'POST',
             body: JSON.stringify({userName, password}),
             headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': '*'},
