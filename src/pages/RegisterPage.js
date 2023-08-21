@@ -9,7 +9,7 @@ export default function RegisterPage(){
      const response = await fetch(`${baseUrl}/register`, {
             method: 'POST',
             body: JSON.stringify({userName, password}),
-            headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'},
+            headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': '*'},
            }) 
            if(response.status === 200){
             alert('Registration sucessful')

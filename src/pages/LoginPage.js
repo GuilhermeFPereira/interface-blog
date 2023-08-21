@@ -14,7 +14,7 @@ export default function LoginPage(){
     const response = await fetch(`${baseUrl}/login` , {
             method: 'POST',
             body: JSON.stringify({userName, password}),
-            headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': 'https://blogpessoal-devgui.vercel.app'},
+            headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': '*'},
             credentials: 'include',
         })
         if(response.ok){
