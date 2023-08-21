@@ -16,7 +16,7 @@ export default function LoginPage(){
             method: 'POST',
             body: JSON.stringify({userName, password}),
             headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': '*'},
-            credentials: 'include',
+            // credentials: 'include',
         })
         if(response.ok){
             response.json().then(userInfo =>{

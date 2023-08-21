@@ -8,7 +8,7 @@ export default function Header(){
   const {setUserInfo, userInfo} = useContext(UserContext)
   useEffect(()=>{
     fetch(`${baseUrl}/profile`,{
-      credentials: 'include',
+      // credentials: 'include',
       header: {'Access-Control-Allow-Origin': '*'},
     }).then(response =>{
       response.json().then(userInfo =>{
@@ -20,7 +20,7 @@ export default function Header(){
   function logout(){
     fetch(`${baseUrl}/logout`, {
       mode: "no-cors",
-      credentials: 'include',
+      // credentials: 'include',
       method: 'POST',
       header:{'Access-Control-Allow-Origin': '*'},
     })
