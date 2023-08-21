@@ -14,7 +14,6 @@ export default function PostPage(){
         
         fetch(`${baseUrl}/post/${id}`,{
             mode: "no-cors",
-            headers: {'Access-Control-Allow-Origin': '*'},
         })
         .then( response => {
             response.json().then(postInfo =>{

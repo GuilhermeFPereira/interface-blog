@@ -7,7 +7,6 @@ export default function IndexPage(){
     useEffect(() =>{
         fetch(`${baseUrl}/post`, {
             mode: "no-cors",
-            headers: {'Access-Control-Allow-Origin': '*'}
         }).then(response =>{
             response.json().then(posts => {
                 SetPosts(posts)

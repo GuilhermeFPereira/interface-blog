@@ -14,7 +14,6 @@ export default function EditPost() {
   useEffect(() => {
     fetch(`${baseUrl}/post/`+id,{
       mode: "no-cors",
-      headers: {'Access-Control-Allow-Origin': '*'}
     })
       .then(response => {
         response.json().then(postInfo => {
@@ -39,8 +38,7 @@ export default function EditPost() {
       mode: "no-cors",
       method: 'PUT',
       body: data,
-
-      // credentials: 'include',
+      credentials: 'include',
     });
     if (response.ok) {
       setRedirect(true);

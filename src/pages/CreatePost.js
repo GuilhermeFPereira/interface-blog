@@ -25,8 +25,7 @@ export default function CreatePost (){
             mode: "no-cors",
             method: 'POST',
             body: data,
-            headers: {'Access-Control-Allow-Origin': '*'},
-            // credentials: 'include'
+            credentials: 'include'
         })
         if(response.ok){
             setRedirect(true)

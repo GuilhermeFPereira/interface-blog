@@ -10,7 +10,7 @@ export default function RegisterPage(){
         mode: "no-cors",
             method: 'POST',
             body: JSON.stringify({userName, password}),
-            headers: {'Content-Type':'application/json', 'Access-Control-Allow-Origin': '*'},
+            headers: {'Content-Type':'application/json'},
            }) 
            if(response.status === 200){
             alert('Registration sucessful')
