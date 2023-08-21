@@ -6,7 +6,7 @@ export default function IndexPage(){
     const [posts,SetPosts] = useState([])
     useEffect(() =>{
         fetch(`${baseUrl}/post`, {
-            // mode: "no-cors",
+            mode: "no-cors",
         }).then(response =>{
             response.json().then(posts => {
                 SetPosts(posts)

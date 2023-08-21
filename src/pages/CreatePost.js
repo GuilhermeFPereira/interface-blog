@@ -22,7 +22,7 @@ export default function CreatePost (){
 
         ev.preventDefault()
    const response = await fetch(`${baseUrl}/post`, {
-            // mode: "no-cors",
+            mode: "no-cors",
             method: 'POST',
             body: data,
             credentials: 'include'
