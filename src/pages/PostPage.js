@@ -14,7 +14,7 @@ export default function PostPage(){
         
         fetch(`${baseUrl}/post/${id}`)
         .then( response => {
-            response.json().then(postInfo =>{
+            response.json().header('Access-Control-Allow-Origin : https://blogpessoal-devgui.vercel.app').then(postInfo =>{
                 setPostInfo(postInfo)
             })
         })
