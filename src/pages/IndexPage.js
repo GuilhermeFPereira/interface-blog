@@ -5,9 +5,7 @@ const baseUrl = 'https://apibloggui.vercel.app'
 export default function IndexPage(){
     const [posts,SetPosts] = useState([])
     useEffect(() =>{
-        fetch(`${baseUrl}/post`, {
-            mode: "no-cors",
-        }).then(response =>{
+        fetch(`${baseUrl}/post`).then(response =>{
             response.json().then(posts => {
                 SetPosts(posts)
             })

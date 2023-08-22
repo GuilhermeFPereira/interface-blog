@@ -12,9 +12,7 @@ export default function EditPost() {
   const [redirect,setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch(`${baseUrl}/post/`+id,{
-      // mode: "no-cors",
-    })
+    fetch(`${baseUrl}/post/`+id)
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);
@@ -35,7 +33,6 @@ export default function EditPost() {
       data.set('file', files?.[0]);
     }
     const response = await fetch(`${baseUrl}/post`, {
-      mode: "no-cors",
       method: 'PUT',
       body: data,
       credentials: 'include',
