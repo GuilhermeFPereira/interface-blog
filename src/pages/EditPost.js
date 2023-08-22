@@ -14,7 +14,7 @@ export default function EditPost() {
   useEffect(() => {
     fetch(`${baseUrl}/post/`+id)
       .then(response => {
-        response.json().header('Access-Control-Allow-Origin : https://blogpessoal-devgui.vercel.app').then(postInfo => {
+        response.json().then(postInfo => {
           setTitle(postInfo.title);
           setContent(postInfo.content);
           setSummary(postInfo.summary);

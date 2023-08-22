@@ -6,7 +6,7 @@ export default function IndexPage(){
     const [posts,SetPosts] = useState([])
     useEffect(() =>{
         fetch(`${baseUrl}/post`).then(response =>{
-            response.json().header('Access-Control-Allow-Origin : https://blogpessoal-devgui.vercel.app').then(posts => {
+            response.json().then(posts => {
                 SetPosts(posts)
             })
         })

@@ -11,7 +11,7 @@ export default function Header(){
       // mode: "no-cors",
       credentials: 'include',
     }).then(response =>{
-      response.json().header('Access-Control-Allow-Origin : https://blogpessoal-devgui.vercel.app').then(userInfo =>{
+      response.json().then(userInfo =>{
         setUserInfo(userInfo)
       })
     })
